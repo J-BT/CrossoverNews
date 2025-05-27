@@ -16,7 +16,7 @@ Qu'en est-il de l'actualité internationale ?
 Dans un premier temps, pour le MVP (Minimum Viable Product), cela aura seulement un but pratique en centralisant l'actualité à un même endroit, vers une interface web ou une montre garmin. <br/>
 Ensuite, l'application régroupera les differents articles par sujet en s'aidant de NLP (Natural Language Processing) même si leur ton diffère. 
 Par exemple, voici deux titres publiés le même jour : <br/>
-1 - "Trump affirme que Poutine « est devenu completement fou » après les frappes meutrières en Ukraine" (source : Euronews, 26/05/2025, https://fr.euronews.com/2025/05/26/trump-affirme-que-poutine-est-devenu-completement-fou-apres-des-frappes-meurtrieres-en-ukr ) 
+1 - "Trump affirme que Poutine « est devenu completement fou » après les frappes meutrières en Ukraine" (source : Euronews, 26/05/2025, https://fr.euronews.com/2025/05/26/trump-affirme-que-poutine-est-devenu-completement-fou-apres-des-frappes-meurtrieres-en-ukr ) <br/>
 2 - "トランプ大統領　プーチン大統領を非難も具体的な対応は不透明" [traduction : "Bien que le président Trump ait critiqué le président Poutine, sa réaction concréte reste floue"] (source : NHK, 26/05/2025, https://www3.nhk.or.jp/news/html/20250526/k10014816641000.html).<br/>
 On remarque ici que le titre de NHK est plus nuancé que celui d'Euronews bien que ces derniers parlent de la même chose !
 
@@ -90,6 +90,10 @@ Les flux d'actualité sont envoyés en push via une **API Rest** vers deux types
   }
 ]
 ```
+
+###  Avertissment sur les conditions d'utilisation
+À l'instar d'Euronews qui interdit formellement de stocker en base de données les articles **cf : https://fr.euronews.com/terms-and-conditions)**, je n'ai volontairement pas implémenté de logique de sauvegarde des flux d'actualité.
+Je vous invite à faire de même si vous clonez ou contribuez au projet.
 
 >  **Soon**
 # 📰 Crossover News – README 🇬🇧 
