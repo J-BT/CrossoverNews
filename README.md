@@ -1,8 +1,8 @@
 # 📰 Crossover News – README 🇫🇷
 
 <div id="header" align="center" style="display: flex; flex-direction: center; justify-content: center; align-items:center;">
-    <img src="./sources/images/nhk-example-trump-putin-2025-05-26.png" title="NHK" alt="NHK" width="250" height="250"/>&nbsp;
-    <img src="./sources/images/euronews-example-trump-putin-2025-05-26.png" title="Euronews" alt="Euronews" width="250" height="250"/>&nbsp;
+    <img src="./sources/images/nhk-example-trump-putin-2025-05-26.png" title="NHK" alt="NHK" width="308" height="250"/>&nbsp;
+    <img src="./sources/images/euronews-example-trump-putin-2025-05-26.png" title="Euronews" alt="Euronews" width="308" height="250"/>&nbsp;
 </div>
 
 ##  Objectifs du projet
@@ -90,3 +90,8 @@ Les flux d'actualité sont envoyés en push via une **API Rest** vers deux types
   }
 ]
 ```
+
+>  **Soon**
+# 📰 Crossover News – README 🇬🇧 
+
+# 📰 Crossover News – README 🇯🇵
