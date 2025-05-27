@@ -100,5 +100,4 @@ Je vous invite à respecter les politiques de chaque média si vous contribuez o
 
 >  **Soon**
 # 📰 Crossover News – README 🇬🇧 
-
 # 📰 Crossover News – README 🇯🇵
