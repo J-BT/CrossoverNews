@@ -1,23 +1,23 @@
-# 📰 Crossover News – README (Français)
+# 📰 Crossover News – README 🇫🇷
 
 <div id="header" align="center" style="display: flex; flex-direction: center; justify-content: center; align-items:center;">
-    <img src="./sources/images/nhk-example-trump-putin-2025-05-26.png" title="NHK" alt="NHK" width="80" height="80"/>&nbsp;
-    <img src="./sources/images/euronews-example-trump-putin-2025-05-26.png" title="Euronews" alt="Euronews" width="80" height="80"/>&nbsp;
+    <img src="./sources/images/nhk-example-trump-putin-2025-05-26.png" title="NHK" alt="NHK" width="250" height="250"/>&nbsp;
+    <img src="./sources/images/euronews-example-trump-putin-2025-05-26.png" title="Euronews" alt="Euronews" width="250" height="250"/>&nbsp;
 </div>
 
 ##  Objectifs du projet
 
-Faire du bruit lorsque l'on mange un plat de nouilles sera perçu positivement au Japon, tandis qu'en France cela renverra une image plutôt négative. Dans le premier cas, un observateur extérieur se dirait "Cette personne apprécie vraiment son plat, c'est agréable !". Dans le deuxième, il s'outrerait en pensant que la personne dégustant son plat est mal élevée.
+Faire du bruit lorsque l'on mange un plat de nouilles sera perçu positivement au Japon, tandis qu'en France cela renverra une image plutôt négative. Dans le premier cas, un observateur extérieur se dirait "Cette personne apprécie vraiment son plat, c'est agréable !". Dans le deuxième, il s'outrerait en pensant que la personne dégustant son plat est mal élevée.<br/>
 Ainsi, un même évènement pourra être perçu différemment selon la zone géographique des personnes qui y assistent.
 
 Qu'en est-il de l'actualité internationale ? 
 
 **Crossover News** est une application web fullstack conçue pour observer l'actualité à travers le prisme de plusieurs médias internationaux.
-Dans un premier temps, pour le MVP (Minimum Viable Product), cela aura seulement un but pratique en centralisant l'actualité à un même endroit, vers une interface web ou une montre garmin. 
+Dans un premier temps, pour le MVP (Minimum Viable Product), cela aura seulement un but pratique en centralisant l'actualité à un même endroit, vers une interface web ou une montre garmin. <br/>
 Ensuite, l'application régroupera les differents articles par sujet en s'aidant de NLP (Natural Language Processing) même si leur ton diffère. 
-Par exemple, voici deux titres publiés le même jour : 
+Par exemple, voici deux titres publiés le même jour : <br/>
 1 - "Trump affirme que Poutine « est devenu completement fou » après les frappes meutrières en Ukraine" (source : Euronews, 26/05/2025, https://fr.euronews.com/2025/05/26/trump-affirme-que-poutine-est-devenu-completement-fou-apres-des-frappes-meurtrieres-en-ukr ) 
-2 - "トランプ大統領　プーチン大統領を非難も具体的な対応は不透明" [traduction : "Bien que le président Trump ait critiqué le président Poutine, sa réaction concréte reste floue"] (source : NHK, 26/05/2025, https://www3.nhk.or.jp/news/html/20250526/k10014816641000.html).
+2 - "トランプ大統領　プーチン大統領を非難も具体的な対応は不透明" [traduction : "Bien que le président Trump ait critiqué le président Poutine, sa réaction concréte reste floue"] (source : NHK, 26/05/2025, https://www3.nhk.or.jp/news/html/20250526/k10014816641000.html).<br/>
 On remarque ici que le titre de NHK est plus nuancé que celui d'Euronews bien que ces derniers parlent de la même chose !
 
 L’objectif final est donc d’offrir une lecture de l’actualité aussi objective que possible.
