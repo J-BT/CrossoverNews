@@ -91,9 +91,12 @@ Les flux d'actualité sont envoyés en push via une **API Rest** vers deux types
 ]
 ```
 
-###  Avertissment sur les conditions d'utilisation
-À l'instar d'Euronews qui interdit formellement de stocker en base de données les articles **cf : https://fr.euronews.com/terms-and-conditions)**, je n'ai volontairement pas implémenté de logique de sauvegarde des flux d'actualité.
-Je vous invite à faire de même si vous clonez ou contribuez au projet.
+### ⚠️ Avertissement – Conditions d’utilisation des flux RSS
+Conformément aux [conditions d'utilisation d’Euronews](https://fr.euronews.com/terms-and-conditions), il est strictement interdit de stocker, modifier ou republier leurs contenus sans autorisation écrite préalable.<br/>
+**Cette application n’effectue aucun enregistrement ni transformation des flux d’actualités.** Les articles sont récupérés dynamiquement depuis les flux RSS publics fournis par chaque média, et les liens renvoient systématiquement vers les sources officielles.<br/>
+
+Je vous invite à respecter les politiques de chaque média si vous contribuez ou réutilisez ce projet.
+
 
 >  **Soon**
 # 📰 Crossover News – README 🇬🇧 
