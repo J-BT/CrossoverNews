@@ -90,6 +90,13 @@ Les flux d'actualité sont envoyés en push via une **API Rest** vers deux types
   }
 ]
 ```
+### ⚠️ Jira - Gestion de projet & planification
+https://jeanbaptistetheroulde.atlassian.net/jira/software/projects/CN/boards/3
+
+<div id="header" align="center" style="display: flex; flex-direction: center; justify-content: center; align-items:center;">
+    <img src="./sources/images/crossovernews-jira-kanban.png" title="kanban-j+1" alt="kanban j+1" width="175" height="200"/>&nbsp;
+</div>
+
 
 ### ⚠️ Avertissement – Conditions d’utilisation des flux RSS
 Conformément aux [conditions d'utilisation d’Euronews](https://fr.euronews.com/terms-and-conditions), il est strictement interdit de stocker, modifier ou republier leurs contenus sans autorisation écrite préalable.<br/>
