@@ -1,3 +1,5 @@
+###------------- API--------------------------------------------###
+
 ###> symfony/framework-bundle ###
 api/.env.local
 api/.env.local.php
@@ -9,3 +11,30 @@ api/public/bundles/
 api/var/
 api/vendor/
 ###< symfony/framework-bundle ###
+
+###------------- WebApp----------------------------------------###
+
+# Logs
+webapp/logs
+webapp/*.log
+webapp/npm-debug.log*
+webapp/yarn-debug.log*
+webapp/yarn-error.log*
+webapp/pnpm-debug.log*
+webapp/lerna-debug.log*
+
+webapp/node_modules
+webapp/dist
+webapp/dist-ssr
+webapp/*.local
+
+# Editor directories and files
+webapp/.vscode/*
+webapp/!.vscode/extensions.json
+webapp/.idea
+webapp/.DS_Store
+webapp/*.suo
+webapp/*.ntvs*
+webapp/*.njsproj
+webapp/*.sln
+webapp/*.sw?
