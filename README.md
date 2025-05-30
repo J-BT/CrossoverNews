@@ -108,7 +108,7 @@ https://jeanbaptistetheroulde.atlassian.net/jira/software/projects/CN/boards/3
 
 ### Source (Projet fullstack github)
 >Ayant très peu de temps pour réaliser cette application, notamment à cause de divers aléas, j'ai choisi de reprendre un projet github déjà fonctionnel et de le modifier directement<br>
->Je peux ainsi me concentrer sur l'aspect fonctionnel et visuel, tel que je le ferais en reprenant un projet déjà en cours en entreprise.
+>Je peux ainsi me concentrer sur l'aspect fonctionnel et visuel, tel que je le ferais en reprenant un projet déjà en cours en entreprise.<br>
 source = https://github.com/IUT-LAVAL-MMI/SymfonyReactOnDocker
 
 <div id="header" align="center" style="display: flex; flex-direction: center; justify-content: center; align-items:center;">
