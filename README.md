@@ -106,14 +106,14 @@ Les flux d'actualité sont envoyés en push via une **API Rest** vers deux types
 ### ⚠️ Jira - Gestion de projet & planification
 https://jeanbaptistetheroulde.atlassian.net/jira/software/projects/CN/boards/3
 
+<div id="header" align="center" style="display: flex; flex-direction: center; justify-content: center; align-items:center;">
+    <img src="./sources/images/crossovernews-jira-kanban.png" title="kanban-j+1" alt="kanban j+1" width="350" height="400"/>&nbsp;
+</div>
+
 ### Source (Projet fullstack github)
 >Ayant très peu de temps pour réaliser cette application, notamment à cause de divers aléas, j'ai choisi de reprendre un projet github déjà fonctionnel et de le modifier directement<br>
 >Je peux ainsi me concentrer sur l'aspect fonctionnel et visuel, tel que je le ferais en reprenant un projet déjà en cours en entreprise.<br>
 source = https://github.com/IUT-LAVAL-MMI/SymfonyReactOnDocker
-
-<div id="header" align="center" style="display: flex; flex-direction: center; justify-content: center; align-items:center;">
-    <img src="./sources/images/crossovernews-jira-kanban.png" title="kanban-j+1" alt="kanban j+1" width="175" height="200"/>&nbsp;
-</div>
 
 
 ### ⚠️ Avertissement – Conditions d’utilisation des flux RSS
