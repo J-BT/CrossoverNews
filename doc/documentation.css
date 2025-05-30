@@ -1,0 +1,59 @@
+* {
+  font-family: serif;
+  font-size: 11px;
+}
+
+p {
+  text-align: justify;
+}
+
+h1 {
+  counter-reset: h2counter;
+  font-size: 16px;
+  text-align: center;
+  border-bottom: 1px solid black;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+  margin-top: 12px;
+}
+
+h2 {
+  font-size: 14px;
+  color: #38bb9c;
+}
+
+h2:before {
+  content: counter(h2counter) ".\0000a0\0000a0";
+  counter-increment: h2counter;
+  counter-reset: h3counter;
+}
+
+h3 {
+  font-size: 14px;
+  color: #2e86c1;
+}
+
+h3:before {
+  content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
+  counter-increment: h3counter;
+}
+
+h4 {
+  font-size: 11px;
+}
+
+table {
+  border: 1px solid black;
+}
+
+th {
+  border-bottom: 1px solid black;
+}
+
+th, td {
+  border-right: 1px solid black;
+}
+
+a[href]:after {
+  content : ""
+}

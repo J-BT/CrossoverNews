@@ -5,6 +5,18 @@
     <img src="./sources/images/euronews-example-trump-putin-2025-05-26.png" title="Euronews" alt="Euronews" width="308" height="250"/>&nbsp;
 </div>
 
+## 📑 Sommaire
+- [Objectifs du projet](#objectifs-du-projet)
+- [Fonctionnement général](#fonctionnement-général)
+- [Technologies utilisées](#technologies-utilisées)
+- [Backend – Symfony API](#backend--symfony-api)
+  - [Endpoints](#endpoints)
+  - [Flux RSS (Sources)](#flux-rss-sources)
+  - [Exemple de réponse `/articles`](#exemple-de-réponse-articles)
+- [⚠️ Jira - Gestion de projet & planification](#️-jira---gestion-de-projet--planification)
+- [⚠️ Avertissement – Conditions d’utilisation des flux RSS](#️-avertissement--conditions-dutilisation-des-flux-rss)
+- [Versions à venir](#versions-à-venir)
+
 ##  Objectifs du projet
 
 Faire du bruit lorsque l'on mange un plat de nouilles sera perçu positivement au Japon, tandis qu'en France cela renverra une image plutôt négative. Dans le premier cas, un observateur extérieur se dirait "Cette personne apprécie vraiment son plat, c'est agréable !". Dans le deuxième, il s'outrerait en pensant que la personne dégustant son plat est mal élevée.<br/>

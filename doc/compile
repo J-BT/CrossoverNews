@@ -1,0 +1,4 @@
+#! /bin/bash
+
+docker build --tag documentationcompiler:1.0 ./compiler
+docker run -it --rm -e OPENSSL_CONF=/etc/ssl/ -v ${PWD}/:/app/markdown/files documentationcompiler:1.0 ./node_modules/.bin/markdown-pdf -s files/documentation.css -c files/ -o files/documentation_fr.pdf files/documentation_fr.md
