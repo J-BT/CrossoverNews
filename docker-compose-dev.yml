@@ -1,4 +1,4 @@
-name: 'crossoverNews-alphaTest'
+name: 'crossoverNews'
 
 services:
   mysqldb:
