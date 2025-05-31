@@ -10,9 +10,10 @@
 - [Fonctionnement général](#fonctionnement-général)
 - [Technologies utilisées](#technologies-utilisées)
 - [Backend – Symfony API](#backend--symfony-api)
-  - [Endpoints](#endpoints)
-  - [Flux RSS (Sources)](#flux-rss-sources)
-  - [Exemple de réponse `/articles`](#exemple-de-réponse-articles)
+- [Endpoints](#endpoints)
+- [Flux RSS (Sources)](#flux-rss-sources)
+- [Exemple de réponse `/articles`](#exemple-de-réponse-articles)
+- [Design](#design) 
 - [⚠️ Jira - Gestion de projet & planification](#️-jira---gestion-de-projet--planification)
 - [Source (Projet fullstack github)](#source-projet-fullstack-github)
 - [⚠️ Avertissement – Conditions d’utilisation des flux RSS](#️-avertissement--conditions-dutilisation-des-flux-rss)
@@ -158,6 +159,10 @@ https://jeanbaptistetheroulde.atlassian.net/jira/software/projects/CN/boards/3
 <div id="header" align="center" style="display: flex; flex-direction: center; justify-content: center; align-items:center;">
     <img src="./sources/images/crossovernews-jira-kanban.png" title="kanban-j+1" alt="kanban j+1" width="350" height="400"/>&nbsp;
 </div>
+
+### Design
+<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/RaHE6JrPEpI1ZRZdJlyVE5/Crossover-News-Web?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+
 
 ### Source (Projet fullstack github)
 >Ayant très peu de temps pour réaliser cette application, notamment à cause de divers aléas, j'ai choisi de reprendre un projet github déjà fonctionnel et de le modifier directement<br>
