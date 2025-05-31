@@ -95,12 +95,56 @@ Les flux d'actualité sont envoyés en push via une **API Rest** vers deux types
 ###  Exemple de réponse `/articles`
 ```json
 [
-  {
-    "title": "Nez rouges et grandes chaussures envahissent les rues de Lima pour la Journée des Clowns",
-    "link": "https://fr.euronews.com/video/2025/05/26/nez-rouges-et-grandes-chaussures-envahissent-les-rues-de-lima-pour-la-journee-des-clowns",
-    "source": "Euronews",
-    "date": "Mon, 26 May 2025 19:55:55 +0200"
-  }
+    {
+        "source": "Euronews[World]",
+        "content": [
+            {
+                "title": "Droits de douane sur l'acier et l'aluminium : l'UE regrette l'augmentation annoncée par Trump",
+                "link": "https://fr.euronews.com/2025/05/31/donald-trump-annonce-une-augmentation-de-50-des-droits-de-douane-sur-lacier-et-laluminium",
+                "date": "Sat, 31 May 2025 10:33:46 +0000"
+            }
+        ]
+    },
+    {
+        "source": "NHK[World]",
+        "content": [
+            {
+                "title": "OPECプラス 7月も原油大幅増産へ 原油価格低い水準続く可能性",
+                "link": "http://www3.nhk.or.jp/news/html/20250531/k10014822391000.html",
+                "date": "Sat, 31 May 2025 14:05:32 +0000"
+            }
+        ]
+    },
+    {
+        "source": "Fox News[World]",
+        "content": [
+            {
+                "title": "Huckabee slams French-backed Palestinian statehood push at UN, says US-Israel are 'inseparably' linked",
+                "link": "https://www.foxnews.com/world/huckabee-slams-french-backed-palestinian-statehood-push-un-says-us-israel-inseparably-linked",
+                "date": "Sat, 31 May 2025 13:19:33 +0000"
+            }
+        ]
+    },
+    {
+        "source": "CBC News[World]",
+        "content": [
+            {
+                "title": "Trump says he plans to double steel and aluminum tariffs",
+                "link": "https://www.cbc.ca/news/world/trump-canada-steel-tariffs-1.7548855?cmp=rss",
+                "date": "Wed, 14 May 2025 08:01:00 +0000"
+            }
+        ]
+    },
+    {
+        "source": "G1 Globo[World]",
+        "content": [
+            {
+                "title": "Irã expande atividade nuclear, desafiando 'pressão máxima' dos EUA",
+                "link": "https://g1.globo.com/mundo/noticia/2025/05/31/ira-expande-atividade-nuclear-apesar-de-pressao-dos-eua.ghtml",
+                "date": "Sat, 31 May 2025 12:05:24 +0000"
+            }
+        ]
+    }
 ]
 ```
 ### ⚠️ Jira - Gestion de projet & planification
