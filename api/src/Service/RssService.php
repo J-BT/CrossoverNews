@@ -45,41 +45,51 @@ class RssService
         'CBC News[Local]' => 'https://www.cbc.ca/webfeed/rss/rss-canada',
         //G1 Globo
         'G1 Globo[Local]' => 'https://g1.globo.com/rss/g1/brasil/',
-        //CGTN
-        'CGTN[Local]' => 'https://www.cgtn.com/subscribe/rss/section/china.xml',
-        //The Times of India
-        'The Times of India[Local]' => 'https://timesofindia.indiatimes.com/rssfeeds/-2128936835.cms',
-        //RNZ
-        'RNZ[Local]' => 'https://www.rnz.co.nz/rss/national.xml',
+        // //CGTN
+        // 'CGTN[Local]' => 'https://www.cgtn.com/subscribe/rss/section/china.xml',
+        // //The Times of India
+        // 'The Times of India[Local]' => 'https://timesofindia.indiatimes.com/rssfeeds/-2128936835.cms',
+        // //RNZ
+        // 'RNZ[Local]' => 'https://www.rnz.co.nz/rss/national.xml',
     ];
 
 
     public function fetchAllArticles(): array
     {
-        $articles = [];
+        $groupedArticles = [];
 
-        foreach ($this->worldFeeds as $source => $url) {
+        $allFeeds = $this->worldFeeds;
+        // $allFeeds = array_merge($this->worldFeeds, $this->localFeeds);
+
+        foreach ($allFeeds as $source => $url) {
             try {
-                $rss = simplexml_load_file($url, 'SimpleXMLElement', LIBXML_NOCDATA);
+                $rss = @simplexml_load_file($url, 'SimpleXMLElement', LIBXML_NOCDATA);
 
                 if ($rss === false || !isset($rss->channel->item)) {
                     continue;
                 }
 
+                $articles = [];
+
                 foreach ($rss->channel->item as $item) {
                     $articles[] = [
                         'title' => (string) $item->title,
                         'link' => (string) $item->link,
-                        'source' => $source,
                         'date' => date(DATE_RFC2822, strtotime((string) $item->pubDate)),
                     ];
                 }
+
+                $groupedArticles[] = [
+                    'source' => $source,
+                    'content' => $articles,
+                ];
+
             } catch (Exception $e) {
-                // Tu peux logguer l'erreur ici avec Monolog plus tard
+                // Tu peux ajouter un log Monolog ici
                 continue;
             }
         }
 
-        return $articles;
+        return $groupedArticles;
     }
 }
