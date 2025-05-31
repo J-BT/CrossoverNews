@@ -141,6 +141,7 @@ Les flux d'actualité sont envoyés en push via une **API Rest** vers deux types
     },
     {
         "source": "G1 Globo[World]",
+        "zone": "Brazil",
         "content": [
             {
                 "title": "Irã expande atividade nuclear, desafiando 'pressão máxima' dos EUA",
