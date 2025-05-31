@@ -43,7 +43,7 @@ class RssService
         ];
     }
 
-
+    ## Methods
     public function fetchAllArticles(): array
     {
         $groupedArticles = [];
