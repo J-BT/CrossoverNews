@@ -22,25 +22,6 @@ services:
     ports:
       - 127.0.0.1:3306:3306
 
-  mongo:
-    image: mongo:6.0
-    env_file:
-      - docker/env/prod/mongo.env
-    volumes:
-      - mongo-data:/data/db
-      - ./docker/dbInit/mongo:/docker-entrypoint-initdb.d:ro
-    networks:
-      lpdiwa-net:
-        aliases:
-          - mongo
-    restart: always
-    healthcheck:
-      test: [ "CMD", "mongosh", "--eval", "'db.runCommand(\"ping\").ok'", "--quiet" ]
-      interval: 10s
-      timeout: 10s
-      retries: 10
-      start_period: 10s
-
   symfony:
     build:
       context: ./docker/images/symfony
@@ -108,7 +89,6 @@ services:
 
 volumes:
   mysqldb-data:
-  mongo-data:
   api-vendor:
 
 
