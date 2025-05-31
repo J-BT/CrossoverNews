@@ -18,20 +18,20 @@ class RssService
         'CBC News[World]' => 'https://www.cbc.ca/webfeed/rss/rss-world',
         //G1 Globo
         'G1 Globo[World]' => 'https://g1.globo.com/rss/g1/mundo/',
-        //CGTN
-        'CGTN[World]' => 'https://www.cgtn.com/subscribe/rss/section/world.xml',
-        //The Times of India
-        'The Times of India[World]' => 'https://timesofindia.indiatimes.com/rssfeeds/296589292.cms',
-        //RNZ
-        'RNZ[World]' => 'https://www.rnz.co.nz/rss/world.xml',
-        //The East African
-        'The East African[World]' => 'https://www.theeastafrican.co.ke/rss.xml',
-        //Al Jazeera
-        'Al Jazeera[World]' => 'https://www.aljazeera.com/xml/rss/all.xml',
-        //Ukrainska Pravda
-        'Ukrainska Pravda[World]' => 'https://www.pravda.com.ua/eng/rss/view_news/',
-        //The Moscow Times
-        'The Moscow Times[World]' => 'https://www.themoscowtimes.com/rss/news',
+        // //CGTN
+        // 'CGTN[World]' => 'https://www.cgtn.com/subscribe/rss/section/world.xml',
+        // //The Times of India
+        // 'The Times of India[World]' => 'https://timesofindia.indiatimes.com/rssfeeds/296589292.cms',
+        // //RNZ
+        // 'RNZ[World]' => 'https://www.rnz.co.nz/rss/world.xml',
+        // //The East African
+        // 'The East African[World]' => 'https://www.theeastafrican.co.ke/rss.xml',
+        // //Al Jazeera
+        // 'Al Jazeera[World]' => 'https://www.aljazeera.com/xml/rss/all.xml',
+        // //Ukrainska Pravda
+        // 'Ukrainska Pravda[World]' => 'https://www.pravda.com.ua/eng/rss/view_news/',
+        // //The Moscow Times
+        // 'The Moscow Times[World]' => 'https://www.themoscowtimes.com/rss/news',
     ];
 
         private array $localFeeds = [
