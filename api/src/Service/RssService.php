@@ -4,54 +4,44 @@ namespace App\Service;
 
 use SimpleXMLElement;
 use Exception;
+use App\Models\Media;
 
 class RssService
 {
-    private array $worldFeeds = [
-        //Euronews
-        'Euronews[World]' => 'https://fr.euronews.com/rss?format=mrss&level=theme&name=news',
-        // NHK
-        'NHK[World]' => 'https://www.nhk.or.jp/rss/news/cat6.xml',
-        //Fox News
-        'Fox News[World]' => 'https://moxie.foxnews.com/google-publisher/world.xml',
-        //CBC News
-        'CBC News[World]' => 'https://www.cbc.ca/webfeed/rss/rss-world',
-        //G1 Globo
-        'G1 Globo[World]' => 'https://g1.globo.com/rss/g1/mundo/',
-        // //CGTN
-        // 'CGTN[World]' => 'https://www.cgtn.com/subscribe/rss/section/world.xml',
-        // //The Times of India
-        // 'The Times of India[World]' => 'https://timesofindia.indiatimes.com/rssfeeds/296589292.cms',
-        // //RNZ
-        // 'RNZ[World]' => 'https://www.rnz.co.nz/rss/world.xml',
-        // //The East African
-        // 'The East African[World]' => 'https://www.theeastafrican.co.ke/rss.xml',
-        // //Al Jazeera
-        // 'Al Jazeera[World]' => 'https://www.aljazeera.com/xml/rss/all.xml',
-        // //Ukrainska Pravda
-        // 'Ukrainska Pravda[World]' => 'https://www.pravda.com.ua/eng/rss/view_news/',
-        // //The Moscow Times
-        // 'The Moscow Times[World]' => 'https://www.themoscowtimes.com/rss/news',
-    ];
+    ## Attributes & Accessors
+    private array $worldFeeds = [];
+    private array $localFeeds = [];
 
-        private array $localFeeds = [
-        //Euronews
-        'Euronews[Local]' => 'https://fr.euronews.com/rss?format=mrss&level=vertical&name=my-europe',
-        // NHK
-        'NHK[Local]' => 'https://www.nhk.or.jp/rss/news/cat0.xml',
-        //Fox News
-        'Fox News[Local]' => 'https://moxie.foxnews.com/google-publisher/us.xml',
-        //CBC News
-        'CBC News[Local]' => 'https://www.cbc.ca/webfeed/rss/rss-canada',
-        //G1 Globo
-        'G1 Globo[Local]' => 'https://g1.globo.com/rss/g1/brasil/',
-        // //CGTN
-        // 'CGTN[Local]' => 'https://www.cgtn.com/subscribe/rss/section/china.xml',
-        // //The Times of India
-        // 'The Times of India[Local]' => 'https://timesofindia.indiatimes.com/rssfeeds/-2128936835.cms',
-        // //RNZ
-        // 'RNZ[Local]' => 'https://www.rnz.co.nz/rss/national.xml',
-    ];
+    ## Constructor
+    public function __construct()
+    {
+        $this->worldFeeds = [
+            new Media('Euronews', 'EU', 'World', 'https://fr.euronews.com/rss?format=mrss&level=theme&name=news'),
+            new Media('NHK', 'Japan', 'World', 'https://www.nhk.or.jp/rss/news/cat6.xml'),
+            new Media('Fox News', 'USA', 'World', 'https://moxie.foxnews.com/google-publisher/world.xml'),
+            new Media('CBC News', 'Canada', 'World', 'https://www.cbc.ca/webfeed/rss/rss-world'),
+            new Media('G1 Globo', 'Brazil', 'World', 'https://g1.globo.com/rss/g1/mundo/'),
+            // new Media('CGTN', 'China', 'World', 'https://www.cgtn.com/subscribe/rss/section/world.xml'),
+            // new Media('The Times of India', 'India', 'World', 'https://timesofindia.indiatimes.com/rssfeeds/296589292.cms'),
+            // new Media('RNZ', 'New Zealand', 'World', 'https://www.rnz.co.nz/rss/world.xml'),
+            // new Media('The East African', 'Kenya', 'World', 'https://www.theeastafrican.co.ke/rss.xml'),
+            // new Media('Al Jazeera', 'Qatar', 'World', 'https://www.aljazeera.com/xml/rss/all.xml'),
+            // new Media('Ukrainska Pravda', 'Ukraine', 'World', 'https://www.pravda.com.ua/eng/rss/view_news/'),
+            // new Media('The Moscow Times', 'Russia', 'World', 'https://www.themoscowtimes.com/rss/news'),
+        ];
+
+
+        $this->localFeeds = [
+            new Media('Euronews', 'EU', 'Local', 'https://fr.euronews.com/rss?format=mrss&level=vertical&name=my-europe'),
+            new Media('NHK', 'Japan', 'Local', 'https://www.nhk.or.jp/rss/news/cat0.xml'),
+            new Media('Fox News', 'USA', 'Local', 'https://moxie.foxnews.com/google-publisher/us.xml'),
+            new Media('CBC News', 'Canada', 'Local', 'https://www.cbc.ca/webfeed/rss/rss-canada'),
+            new Media('G1 Globo', 'Brazil', 'Local', 'https://g1.globo.com/rss/g1/brasil/'),
+            new Media('CGTN', 'China', 'Local', 'https://www.cgtn.com/subscribe/rss/section/china.xml'),
+            new Media('The Times of India', 'India', 'Local', 'https://timesofindia.indiatimes.com/rssfeeds/-2128936835.cms'),
+            new Media('RNZ', 'New Zealand', 'Local', 'https://www.rnz.co.nz/rss/national.xml'),
+        ];
+    }
 
 
     public function fetchAllArticles(): array
@@ -61,9 +51,9 @@ class RssService
         $allFeeds = $this->worldFeeds;
         // $allFeeds = array_merge($this->worldFeeds, $this->localFeeds);
 
-        foreach ($allFeeds as $source => $url) {
+        foreach ($allFeeds as $media) {
             try {
-                $rss = @simplexml_load_file($url, 'SimpleXMLElement', LIBXML_NOCDATA);
+                $rss = @simplexml_load_file($media->url, 'SimpleXMLElement', LIBXML_NOCDATA);
 
                 if ($rss === false || !isset($rss->channel->item)) {
                     continue;
@@ -80,12 +70,16 @@ class RssService
                 }
 
                 $groupedArticles[] = [
-                    'source' => $source,
+                    'source' => "{$media->name}[{$media->category}]",
+                    'zone' => $media->zone,
                     'content' => $articles,
                 ];
 
-            } catch (Exception $e) {
-                // Tu peux ajouter un log Monolog ici
+            } catch (Throwable $e) {
+                $groupedArticles = [ 
+                    'errorType' => get_class($e), 
+                    'message' => $e->getMessage()
+                ];
                 continue;
             }
         }

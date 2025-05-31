@@ -97,6 +97,7 @@ Les flux d'actualité sont envoyés en push via une **API Rest** vers deux types
 [
     {
         "source": "Euronews[World]",
+        "zone": "EU",
         "content": [
             {
                 "title": "Droits de douane sur l'acier et l'aluminium : l'UE regrette l'augmentation annoncée par Trump",
@@ -107,6 +108,7 @@ Les flux d'actualité sont envoyés en push via une **API Rest** vers deux types
     },
     {
         "source": "NHK[World]",
+        "zone": "Japan",
         "content": [
             {
                 "title": "OPECプラス 7月も原油大幅増産へ 原油価格低い水準続く可能性",
@@ -117,6 +119,7 @@ Les flux d'actualité sont envoyés en push via une **API Rest** vers deux types
     },
     {
         "source": "Fox News[World]",
+        "zone": "USA",
         "content": [
             {
                 "title": "Huckabee slams French-backed Palestinian statehood push at UN, says US-Israel are 'inseparably' linked",
@@ -127,21 +130,12 @@ Les flux d'actualité sont envoyés en push via une **API Rest** vers deux types
     },
     {
         "source": "CBC News[World]",
+        "zone": "Canada",
         "content": [
             {
                 "title": "Trump says he plans to double steel and aluminum tariffs",
                 "link": "https://www.cbc.ca/news/world/trump-canada-steel-tariffs-1.7548855?cmp=rss",
                 "date": "Wed, 14 May 2025 08:01:00 +0000"
-            }
-        ]
-    },
-    {
-        "source": "G1 Globo[World]",
-        "content": [
-            {
-                "title": "Irã expande atividade nuclear, desafiando 'pressão máxima' dos EUA",
-                "link": "https://g1.globo.com/mundo/noticia/2025/05/31/ira-expande-atividade-nuclear-apesar-de-pressao-dos-eua.ghtml",
-                "date": "Sat, 31 May 2025 12:05:24 +0000"
             }
         ]
     }
