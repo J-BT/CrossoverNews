@@ -138,6 +138,16 @@ Les flux d'actualité sont envoyés en push via une **API Rest** vers deux types
                 "date": "Wed, 14 May 2025 08:01:00 +0000"
             }
         ]
+    },
+    {
+        "source": "G1 Globo[World]",
+        "content": [
+            {
+                "title": "Irã expande atividade nuclear, desafiando 'pressão máxima' dos EUA",
+                "link": "https://g1.globo.com/mundo/noticia/2025/05/31/ira-expande-atividade-nuclear-apesar-de-pressao-dos-eua.ghtml",
+                "date": "Sat, 31 May 2025 12:05:24 +0000"
+            }
+        ]
     }
 ]
 ```
