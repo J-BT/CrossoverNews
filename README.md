@@ -161,13 +161,13 @@ https://jeanbaptistetheroulde.atlassian.net/jira/software/projects/CN/boards/3
 </div>
 
 ### Design
->Outil = Figma
-Maquette version laptop
+Outil = Figma<br/>
+>Maquette version laptop
 <div id="header" align="center" style="display: flex; flex-direction: column; justify-content: center; align-items:center;">
     <img src="./sources/images/crossovernews-laptop-design.png" title="design-laptop" alt="design-laptop" width="600" height="342"/>&nbsp;
-</div>
+</div>&nbsp;
 
-Maquette version mobile
+Maquette version mobile<br/>
 <div id="header" align="center" style="display: flex; flex-direction: column; justify-content: center; align-items:center;">
     <img src="./sources/images/crossovernews-mobile-design.png" title="design-mobile" alt="design-mobile" width="387" height="600"/>&nbsp;
 </div>
