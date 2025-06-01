@@ -156,12 +156,16 @@ Les flux d'actualité sont envoyés en push via une **API Rest** vers deux types
 ### ⚠️ Jira - Gestion de projet & planification
 https://jeanbaptistetheroulde.atlassian.net/jira/software/projects/CN/boards/3
 
-<div id="header" align="center" style="display: flex; flex-direction: center; justify-content: center; align-items:center;">
+<div id="header" align="center" style="display: flex; flex-direction: row; justify-content: center; align-items:center;">
     <img src="./sources/images/crossovernews-jira-kanban.png" title="kanban-j+1" alt="kanban j+1" width="350" height="400"/>&nbsp;
 </div>
 
 ### Design
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/design/RaHE6JrPEpI1ZRZdJlyVE5/Crossover-News-Web?node-id=0-1&embed-host=share" allowfullscreen></iframe>
+>Outil = Figma
+<div id="header" align="center" style="display: flex; flex-direction: column; justify-content: center; align-items:center;">
+    <img src="./sources/images/crossovernews-laptop-design.png" title="design-laptop" alt="design-laptop" width="600" height="342"/>&nbsp;
+    <img src="./sources/images/crossovernews-mobile-design.png" title="design-mobile" alt="design-mobile" width="600" height="387"/>&nbsp;
+</div>
 
 
 ### Source (Projet fullstack github)
