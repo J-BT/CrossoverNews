@@ -65,10 +65,10 @@ services:
         aliases:
           - httpsrv
     ports:
-      - 80:80
+      - 11111:80
     restart: always
     healthcheck:
-      test: [ "CMD-SHELL", "curl -so /dev/null http://localhost:80/" ]
+      test: [ "CMD-SHELL", "curl -so /dev/null http://localhost:11111/" ]
       interval: 10s
       timeout: 10s
       retries: 10
