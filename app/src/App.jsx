@@ -23,14 +23,14 @@ function App() {
       <RootStore.Provider value={STORE}>
         <ComponentErrorHandler>
           <ErrorList />
-          <header>
+          {/* <header>
             <NavBar />
-          </header>
+          </header> */}
           <main role="main">
             <Container>
               <Routes>
                 <Route path="/" element={<Welcome />} />
-                <Route path="/sql" element={<ToDoList listName="sqlList" />} />
+                {/* <Route path="/sql" element={<ToDoList listName="sqlList" />} /> */}
               </Routes>
             </Container>
           </main>
