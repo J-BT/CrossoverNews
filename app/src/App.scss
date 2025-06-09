@@ -1,0 +1,49 @@
+/********************************* Fonts **********************************/
+/**************************************************************************/
+
+@font-face {
+    font-family: 'Azonic';
+    src: url('./fonts/Azonix-1VB0.otf');
+}
+
+@font-face {
+    font-family: 'Audiowide';
+    src: url('./fonts/Audiowide-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Alata';
+    src: url('./fonts/Alata-Regular.ttf');
+}
+
+
+/********************************* Style **********************************/
+/**************************************************************************/
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    min-height: 100vh;
+    width: 100vw;
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    // color: #e6ddf9;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

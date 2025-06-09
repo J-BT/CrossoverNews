@@ -1,0 +1,54 @@
+.app {
+    color: #e6ddf9;
+    background-image: url('/src/assets/digital-world.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    background-attachment: fixed;
+    min-height: 100dvh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.main-content {
+    width: 100%;
+    // height: 50vh;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    // background: orange;
+
+    .news-cards {
+        display: flex;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        justify-content: start;
+
+        // mobile
+        @media (max-width: 768px) {
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 1rem;
+            width: max-content;
+            min-width: 100%;
+        }
+
+        // tablet & small laptops
+        @media (min-width: 769px) and (max-width: 1200px) {
+
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            padding-bottom: 1rem;
+            width: max-content;
+            min-width: 100%;
+        }
+    }
+}
