@@ -1,0 +1,122 @@
+.card {
+    // background: rgb(0, 114, 252, 0.2);
+    background: linear-gradient(rgb(0, 114, 252, 0.3), rgb(0, 114, 252, 0.2));
+    border-radius: 20px;
+    padding: 1rem;
+    width: 20%;
+    // height: 100%;
+    height: 35vh;
+    max-width: 280px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Alata';
+    overflow: hidden;
+
+    scroll-snap-align: center;
+    flex: 0 0 auto;
+
+    @media (max-width: 768px) {
+        width: 84.5vw;
+        max-width: none;
+        min-width: 84.5vw;
+        height: 50vh;
+    }
+
+    @media (min-width: 769px) and (max-width: 1200px) {
+        width: 28vw;
+        max-width: none;
+        min-width: 28vw;
+        height: 30vh;
+    }
+
+    h2 {
+        // background: pink;
+        width: 100%;
+        height: 15%;
+        flex-direction: column;
+        align-items: flex-start;
+        color: #00e6f6;
+        margin: 0;
+        font-size: 1.8rem;
+
+    }
+
+    .card-content-wrapper {
+        flex: 1;
+        overflow-y: auto;
+        width: 100%;
+        padding-right: 4px; // pour ne pas cacher le scroll
+    }
+
+    .card-content {
+        background: linear-gradient(rgb(0, 114, 252, 0.2), rgb(0, 114, 252, 0.8));
+        padding: 0.4rem;
+        margin-bottom: 0.5rem;
+        border-radius: 8px;
+
+        h3 {
+            font-size: 1.1rem;
+            margin: 0.5rem 0 0 0;
+            // background: purple;
+            text-align: start;
+        }
+
+        .time-container {
+            // background: green;
+            text-align: start;
+
+            time {
+                font-size: 0.8rem;
+                color: #aaa;
+                width: 100%;
+                // background: blue;
+                text-align: start;
+            }
+        }
+
+
+        p {
+            height: 47%;
+            font-size: 1rem;
+            margin: 1rem 0;
+            text-align: left;
+            text-justify: inter-word;
+            line-height: 1.5rem;
+            height: calc(1.5rem * 4);
+            text-align: left;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 4;
+            line-clamp: 4;
+            -webkit-box-orient: vertical;
+        }
+
+        .btn-container {
+            width: 100%;
+            // background: orange;
+            text-align: end;
+
+            .btn-read {
+                height: fit-content;
+                background: #00e6f6;
+                font-family: 'Audiowide';
+                border: none;
+                color: rgba(255, 255, 255, 1);
+                padding: 0.1rem 0.6rem;
+                margin: 0.3rem;
+                border-radius: 10px;
+                cursor: pointer;
+                font-size: 1rem;
+                text-decoration: none;
+                font-weight: bold;
+                transition: background 0.2s ease;
+
+                &:hover {
+                    background: #00c3ff;
+                }
+            }
+        }
+    }
+}
