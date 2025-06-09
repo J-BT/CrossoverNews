@@ -2,8 +2,6 @@ FROM node:22-slim
 
 WORKDIR /app
 
-ENV USE_API=true
-
 COPY package.json .
 
 RUN npm install

@@ -1,0 +1,74 @@
+name: 'crossoverNews'
+
+services:
+  mysqldb:
+    image: mysql:8.0
+    env_file:
+      - docker/env/prod/mysqldb.env
+    volumes:
+      - mysqldb-data:/var/lib/mysql
+      - ./docker/dbInit/mysqldb:/docker-entrypoint-initdb.d:ro
+    networks:
+      - server-https-network
+    restart: always
+    healthcheck:
+      test: [ "CMD-SHELL", "mysqladmin -uroot -p$${MYSQL_ROOT_PASSWORD} -h 127.0.0.1 ping" ]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+      start_period: 10s
+    expose:
+      - "3306"
+
+  symfony:
+    build:
+      context: ./docker/images/symfony
+      args:
+        - http_proxy=${HTTP_PROXY:-}
+        - https_proxy=${HTTPS_PROXY:-}
+        - no_proxy=${NO_PROXY:-}
+    env_file:
+      - docker/env/prod/symfony.env
+    environment:
+      - http_proxy=${HTTP_PROXY:-}
+      - https_proxy=${HTTPS_PROXY:-}
+      - no_proxy=${NO_PROXY:-}
+    volumes:
+      - api-vendor:/var/www/app/vendor
+      - ./docker/conf/dev/symfony_php.ini:/usr/local/etc/php/php.ini:ro
+      - ./api:/var/www/app
+    working_dir: /var/www/app
+    networks:
+      - server-https-network
+    restart: always
+    command: bash -c "composer install --no-dev && php-fpm"
+    healthcheck:
+      test: [ "CMD", "pidof", "php-fpm" ]
+      interval: 10s
+      timeout: 10s
+      retries: 10
+      start_period: 10s
+
+  npm:
+    image: node:18
+    env_file:
+      - docker/env/prod/npm.env
+    environment:
+      - http_proxy=${HTTP_PROXY:-}
+      - https_proxy=${HTTPS_PROXY:-}
+      - no_proxy=${NO_PROXY:-}
+    volumes:
+      - ./app:/var/www/app
+    working_dir: /var/www/app
+    command: bash -c "npm ci && npm run build"
+    networks:
+      - server-https-network
+
+volumes:
+  mysqldb-data:
+  api-vendor:
+
+
+networks:
+  server-https-network:
+    external: true

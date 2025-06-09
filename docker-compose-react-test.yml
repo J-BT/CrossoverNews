@@ -1,0 +1,18 @@
+
+
+services:
+    crossovernews-react-vite-test:
+        container_name: crossovernews-react-vite-test
+
+        build:
+            context: ./app
+            # dockerfile: Dockerfile
+
+        ports:
+            - "5002:3000" 
+
+        volumes:
+            - .:/app
+            - /app/node_modules
+
+        command: npm run dev

@@ -8,7 +8,16 @@ export default ({ mode }) => {
   return defineConfig({
     plugins: [react()],
     define: {
-      __USE_API__: JSON.stringify(env.USE_API === 'true'),
+      __USE_API__: JSON.stringify(env.VITE_USE_API === 'true'),
+      __API_PROD__: JSON.stringify(env.VITE_API_PROD)
+    },
+    server: {
+      watch: {
+        usePolling: true,
+      },
+      host: true,
+      strictPort: true,
+      port: 3000,
     },
   })
 }

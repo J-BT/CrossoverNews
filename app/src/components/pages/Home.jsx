@@ -14,10 +14,12 @@ function Home() {
 
     useEffect(() => {
 
-        FetchArticles('http://127.0.0.1:11111/api/articles', exampleArticles,
+        FetchArticles(`${__API_PROD__}/articles`, exampleArticles,
             setArticles, setGroupedArticles, setIsLoading, setError);
 
     }, []);
+
+    console.log(`${__API_PROD__}/articles`);
 
     if (isLoading) return <div>Chargement...</div>;
     if (error) return <div>Erreur : {error.message}</div>;
